@@ -78,7 +78,7 @@ def knapsack_problem(capacity, goal, weights, profits):
         if a valid combination is found, otherwise False.
     """
     n = len(weights)
-    combinaciones = itt.product([0, 1], repeat=n)
+    combinaciones = itertools.product([0, 1], repeat=n)
     for combinacion in combinaciones:
         if sum_of_values(weights, combinacion) <= capacity \
         and sum_of_values(profits, combinacion) >= goal:
